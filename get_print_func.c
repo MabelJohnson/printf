@@ -11,6 +11,8 @@ int (*get_print_func(char spc))(va_list, char *, int *)
 	{'c', pnt_char},
 	{'s', pnt_string},
 	{'%', pnt_percentage},
+	{'d', pnt_number},
+	{'i', pnt_number},
 	{'\0', NULL}
 	};
 	int i;

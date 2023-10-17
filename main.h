@@ -7,6 +7,7 @@
 
 #define BSIZE 1024
 #define VOIDED(x) (void)(x)
+#define ABS(x)((x < 0) ? -(x) : x)
 
 /**
  * struct print_functions - Struct print_functions
@@ -26,7 +27,9 @@ int (*get_print_func(char spc))(va_list, char *, int *);
 int pnt_char(va_list list, char *, int *);
 int pnt_string(va_list list, char *, int *);
 int pnt_percentage(va_list list, char *buffer, int *pointer);
+int pnt_number(va_list list, char *buffer, int *pointer);
 /*Buffer printer*/
 void pnt_buffer(char *, int *);
+int _putchar(char c);
 
 #endif
