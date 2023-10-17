@@ -34,24 +34,18 @@ int pnt_number(va_list list, char *buffer, int *pointer)
 		if (n > -10)
 		{
 			_putchar(-n + '0');
-		} else
-		{
-			while (x != 0)
-			{
-				g = -n;
-				g = (g / x) % 10;
-				x = x / 10;
-				_putchar(g + '0');
-			}
+			return (2);
 		}
-	} else if (n < 10)
+	}
+	if (n < 10 && n >= 0)
 	{
 		_putchar(n + '0');
+		c--;
 	} else
 	{
 		while (x != 0)
 		{
-			g = n;
+			g = n < 0 ? -n : n;
 			g = (g / x) % 10;
 			x = x / 10;
 			_putchar(g + '0');
